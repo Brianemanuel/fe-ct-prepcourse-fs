@@ -11,16 +11,16 @@ const nuevoString = 'Hola';
 const nuevoNumero = 3;
 
 // Crea una variable de tipo boolean.
-const nuevoBoolean = null;
+const nuevoBoolean = true;
 
 // Resuelve el siguiente problema matemático.
-const nuevaResta = null;
+const nuevaResta = 7 - 2 === 5;
 
 // Resuelve el siguiente problema matemático.
-const nuevaMultiplicacion = null;
+const nuevaMultiplicacion = 3 * 3 === 9;
 
 // Resuelve el siguiente problema matemático.
-const nuevoModulo = null;
+const nuevoModulo = 21 % 5 === 1;
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
