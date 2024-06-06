@@ -69,18 +69,35 @@ function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   var resultado = 0;
+   for(i = 0; i < arrayOfNums.length; i++){
+      resultado = resultado + arrayOfNums[i];
+   }
+   return resultado;
 }
 
 function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var suma = 0;
+   for(i = 0; i < resultadosTest.length; i++){
+      suma += resultadosTest[i];
+   }
+   return suma / resultadosTest.length;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+   var contenedor = 0;
+   for(i = 0; i < arrayOfNums.length; i++){
+      if(arrayOfNums[i] > contenedor){
+         contenedor = arrayOfNums[i]
+      };
+   }
+   return contenedor;
 }
 
 function multiplicarArgumentos() {
@@ -88,11 +105,19 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+
 }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   var mayora18 = [];
+   for(i = 0; i < array.length; i++){
+      if(array[i] > 18){
+         mayora18.push(array[i]);
+      }
+   }
+   return mayora18.length;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -100,18 +125,35 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
+   if(numeroDeDia === 1 || numeroDeDia === 7){
+      return "Es fin de semana";
+   }
+   else if(numeroDeDia > 1 || numeroDeDia < 7){
+      return "Es dia laboral";
+   }
 }
 
 function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+   var numero = num.toString();
+   if(numero.charAt(0) === "9"){
+      return true;
+   } 
+   return false;
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   for(i = 0; i < array.length; i++){
+      if(array[i] === array[i + 1]){
+         return true;
+      }
+   }
+   return false;
 }
 
 function mesesDelAño(array) {
