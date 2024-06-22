@@ -105,6 +105,12 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   if(arguments.length === 0) return 0;
+   var multiplicar = 1;
+   for(i = 0; i < arguments.length; i++){
+      multiplicar = multiplicar * arguments[i];
+   }
+   return multiplicar;
 
 }
 
@@ -209,6 +215,17 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var array = [];
+   var contador = 0;
+      while(contador < 10){
+         num += 2;
+         if( num === contador) break;
+         array.push(num)
+         contador++;
+      }
+      if(contador < 10){ return "Se interrumpió la ejecución"};
+      return array;
+
 }
 
 function continueStatement(num) {
@@ -218,6 +235,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var array= [];
+   var contador = 0;
+   while(contador < 10){
+      contador++;
+      if(contador === 5) continue;
+      num += 2
+      array.push(num);
+   }
+   return array;
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
